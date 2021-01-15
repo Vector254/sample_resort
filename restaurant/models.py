@@ -10,7 +10,6 @@ class Item(models.Model):
     name = models.CharField(max_length=50,blank=True)	   
     price = models.CharField(max_length=50, blank=True)	
     category = models.ForeignKey('Category', on_delete=models.CASCADE, null='True', blank=True)
-    date_posted = models.DateTimeField(default=timezone.now)
     
 
     def __str__(self):
@@ -24,7 +23,7 @@ class Item(models.Model):
 class Category(models.Model):
 
     name = models.CharField(max_length=50,blank=True)	
-    
+
     def __str__(self):
         return self.name
     
