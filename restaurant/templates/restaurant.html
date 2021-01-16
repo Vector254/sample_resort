@@ -1,0 +1,49 @@
+{% extends 'base.html'%}
+
+{% block content %}
+
+
+{{block.super}}
+<style>
+    .item img
+    { height: 100px;
+      width: 100px;
+      margin: 20px;}
+</style>
+
+    <div class="container">
+        <div class="row">
+           <div class="col-md-4">
+               <button class="btn btn-success">DRINKS</button>
+           </div>
+           <div class="col-md-4">
+               <button class="btn btn-danger">MEALS</button>
+           </div>
+        </div>
+       
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4"> <u><h3>name</h3></u></div>
+            <div class="col-md-4"> <u><h3>price</h3></u></div>
+        </div>
+        {% for item in items %}
+      
+        <div class="row">
+
+            <div class="item col-md-4">
+                <u><h3></h3></u>
+                <img src="{{item.image.url}}" alt="">
+            </div>
+            <div class="name col-md-4">
+                
+                <b>{{item.name}}</b>
+            </div>
+            <div class="price col-md-4">
+               
+                <b><i>{{item.price}}</i></b>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+{% endblock %}
