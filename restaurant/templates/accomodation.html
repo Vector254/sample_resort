@@ -25,16 +25,24 @@
         background-image: url(../../static/images/book.jpg);
         background-size: cover;
         height: 300px;
-      
-
+    }
+    .modal-content{
+      background-color: blanchedalmond;
+    }
+    .modal-header{
+      background-color: #003F91;
     }
 </style>
 
     <div class="container-fluid">
         <div class="row">
             <div class="book col-md-6">
+              <p>Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
+                Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
+                Lorem ipsum Lorem ipsum Lorem ipsum
+              </p>
                 <button type="button" class="btn btn-md" data-toggle="modal" data-target="#ModalCenter">
-                    make reservation
+                   <b>make reservation</b> 
                   </button>
                 <div class="modal fade" id="ModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
@@ -47,12 +55,11 @@
         </div>
         <div class="modal-body">
             <form action="" method="POST" enctype="multipart/form-data">
-               <input type="text" placeholder="name">
-               <input type="email" placeholder="Email Address">
-               <input type="date">
-               <input type="number" >
+              {% csrf_token %}
+              {{form|crispy}}
                 <div class="form-group">
-                  <input type="submit" class="btn btn-primary " value="Post">
+                 
+                  <input type="submit" class="btn btn-md " value="reserve">
                 </div>
             </form>
         </div>
