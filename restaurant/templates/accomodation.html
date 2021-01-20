@@ -1,14 +1,53 @@
-{% extends 'base.html'%}
+{% extends 'basenormal.html'%}
 
 {% block content %}
 
 
 {{block.super}}
 <style>
-  
+   body{
+        background-color: darkgray;
+        padding-top: 100px;
+    
+    }
+    .btn:hover{
+        background-color:#14110f ;
+        color:  #ffda22;
+    }
+    .btn:active{
+        background-color:#14110f ;
+        color:  #ffda22;
+    }
+    .book{
+        padding: 40px;
+    }
+
+    .inn{
+        background-image: url(../../static/images/book.jpg);
+        background-size: cover;
+        height: 300px;
+      
+
+    }
 </style>
 
-    <div class="container">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="book col-md-6">
+                <h2>reservations</h2>
+                <p>lorem ipsum lorem ipsum lorem ipsum
+                    lorem ipsum lorem ipsum lorem ipsum
+                    lorem ipsum lorem ipsum lorem ipsum
+                    lorem ipsum lorem ipsum lorem ipsum
+                    
+                </p>
+                <button class="btn btn-md">Make reservation</button>
+            </div>
+            <div class="inn col-md-6">
+               
+            </div>
+        </div>
         
+    </div>
 
 {% endblock %}

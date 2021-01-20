@@ -4,7 +4,9 @@ from .models import Category, Item
 
 def restaurant(request):
     items=Item.objects.all()
-    context = {'items':items}
+    drinks=Item.objects.filter(group__name='Drinks')
+    meals=Item.objects.filter(group__name='Meals')
+    context = {'drinks':drinks, 'meals':meals}
        
     return render(request, 'restaurant.html', context)
 
@@ -13,3 +15,6 @@ def accomodation(request):
     context = {'items':items}
        
     return render(request, 'accomodation.html', context)
+
+def contact(request):
+    return render(request, 'contact.html', context)

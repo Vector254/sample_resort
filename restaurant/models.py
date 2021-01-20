@@ -34,4 +34,10 @@ class Group(models.Model):
 
     def __str__(self):
         return self.name
-    
+
+class Accomodation(models.Model):
+
+    level = models.CharField(max_length=50,blank=True )
+
+    def __str__(self):
+        return self.level

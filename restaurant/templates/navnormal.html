@@ -1,0 +1,69 @@
+<style>
+    /* Create a sticky/fixed navbar */
+  #navbar {
+    overflow: hidden;
+    background-color: #003F91;
+    color: black;
+    padding: 10px 10px; /* Large padding which will shrink on scroll (using JS) */
+    transition: 0.4s; /* Adds a transition effect when the padding is decreased */
+    position: fixed; /* Sticky/fixed navbar */
+    width: 100%;
+    top: 0; /* At the top */
+    z-index: 99;
+    
+    
+  }
+  .navbar-toggler{
+  float: right;
+}
+/* Style the navbar links */
+
+
+/* Style the logo */
+#navbar #logo {
+  font-size: 35px;
+  font-weight: bold;
+  transition: 0.4s;
+}
+
+/* Links on mouse-over */
+#navbar a:hover {
+  background-color:#251605 ;
+        color:  #ffda22;
+}
+
+/* Style the active/current link */
+#navbar a.active {
+  background-color: dodgerblue;
+  color: white;
+}
+
+/* Display some links to the right */
+
+
+/* Add responsiveness - on screens less than 580px wide, display the navbar vertically instead of horizontally */
+@media screen and (max-width: 580px) {
+  #navbar {
+    padding: 20px 10px !important; /* Use !important to make sure that JavaScript doesn't override the padding on small screens */
+  }
+  
+  
+}
+
+</style>
+  
+  </style>
+<div id="navbar">
+    <a href="#default" id="logo">CompanyLogo</a>
+    <button class="navbar-toggler navbar-light" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link active" href="/">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-item nav-link" href="">menu</a>
+        <a class="nav-item nav-link" href="">contacts</a>
+      </div>
+    </div>
+  </div>
