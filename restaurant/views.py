@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from .models import Category, Item
-from .forms import ReserveForm
+from .forms import ReserveForm, ContactForm
 # Create your views here.
 
 def restaurant(request):
@@ -25,4 +25,12 @@ def accomodation(request):
     return render(request, 'accomodation.html', context)
 
 def contact(request):
+    if request.method == 'POST':
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            pass  # does nothing, just trigger the validation
+    else:
+        form = ContactForm()
+    context = {'form':form}
+
     return render(request, 'contact.html', context)
